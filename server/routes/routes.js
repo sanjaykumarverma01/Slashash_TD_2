@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Add a favorite quote
 router.post("/favorites", (req, res) => {
-  const { content, author } = req.body;
+  const { quote_id, content, author } = req.body;
 
   const query =
     "INSERT INTO favorites (quote_id, content, author) VALUES (?, ?, ?)";
